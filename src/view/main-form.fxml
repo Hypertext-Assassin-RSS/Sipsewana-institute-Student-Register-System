@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -24,9 +24,9 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1280.0">
                      <children>
-                        <ImageView fitHeight="132.0" fitWidth="139.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="114.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../assets/img/channels4_profile.jpg" />
+                              <Image url="@assets/img/channels4_profile.jpg" />
                            </image>
                         </ImageView>
                      </children>
@@ -58,7 +58,7 @@
                                     <Insets left="280.0" right="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <TextField fx:id="txtName" prefHeight="25.0" prefWidth="500.0" />
+                              <JFXTextField fx:id="txtName" prefWidth="500.0" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1280.0">
@@ -71,7 +71,7 @@
                                     <Insets left="280.0" right="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <DatePicker fx:id="txtBday" prefHeight="25.0" prefWidth="250.0" />
+                              <JFXTimePicker fx:id="txtBday" prefWidth="250.0" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1280.0" spacing="10.0">
@@ -84,8 +84,12 @@
                                     <Insets left="280.0" right="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <CheckBox fx:id="txtMale" mnemonicParsing="false" text="Male" />
-                              <CheckBox fx:id="txtFemale" mnemonicParsing="false" text="Female" />
+                              <JFXRadioButton fx:id="radioMale" text="Male">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="RadioFemale" text="Female" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1280.0">
@@ -98,7 +102,7 @@
                                     <Insets left="280.0" right="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <TextField fx:id="txtAddress" prefHeight="25.0" prefWidth="500.0" />
+                              <JFXTextField fx:id="txtAddress" prefWidth="500.0" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1280.0">
@@ -111,7 +115,7 @@
                                     <Insets left="280.0" right="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <TextField fx:id="txtSchool" prefHeight="25.0" prefWidth="500.0" />
+                              <JFXTextField fx:id="txtSchool" prefWidth="500.0" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1280.0">
@@ -124,7 +128,7 @@
                                     <Insets left="280.0" right="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <ComboBox fx:id="cmbCourse" prefHeight="25.0" prefWidth="250.0" />
+                              <JFXComboBox fx:id="cmbCourse" prefWidth="250.0" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1280.0">
@@ -137,7 +141,7 @@
                                     <Insets left="280.0" right="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <TextField fx:id="txtContact" prefHeight="25.0" prefWidth="500.0" />
+                              <JFXTextField fx:id="txtContact" prefWidth="500.0" />
                            </children>
                         </HBox>
                         <Separator prefWidth="200.0" />
@@ -151,7 +155,7 @@
                                     <Insets left="280.0" right="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <TextField fx:id="txtPname" prefHeight="25.0" prefWidth="500.0" />
+                              <JFXTextField fx:id="txtPname" prefWidth="500.0" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1280.0">
@@ -164,12 +168,12 @@
                                     <Insets left="280.0" right="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <TextField fx:id="txtPcontact" prefHeight="25.0" prefWidth="500.0" />
+                              <JFXTextField fx:id="txtPcontact" prefWidth="500.0" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
                            <children>
-                              <JFXButton fx:id="btnReset" buttonType="RAISED" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: #FFB400;" text="RESET" textFill="#0077a2">
+                              <JFXButton fx:id="btnReset" buttonType="RAISED" onMouseClicked="#Clear" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: #FFB400;" text="RESET" textFill="#0077a2">
                                  <HBox.margin>
                                     <Insets right="40.0" />
                                  </HBox.margin>

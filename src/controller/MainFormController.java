@@ -6,44 +6,42 @@ package controller;
  *12/16/2021
  */
 
-import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.*;
 import javafx.fxml.FXML;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 
 public class MainFormController {
 
     @FXML
-    private TextField txtName;
+    private JFXTextField txtName;
 
     @FXML
-    private DatePicker txtBday;
+    private JFXDatePicker txtBday;
 
     @FXML
-    private CheckBox txtMale;
+    private JFXRadioButton radioMale;
 
     @FXML
-    private CheckBox txtFemale;
+    private JFXRadioButton radioFemale;
 
     @FXML
-    private TextField txtAddress;
+    private JFXTextField txtAddress;
 
     @FXML
-    private TextField txtSchool;
+    private JFXTextField txtSchool;
 
     @FXML
-    private ComboBox<?> cmbCourse;
+    private JFXComboBox<String> cmbCourse;
 
     @FXML
-    private TextField txtContact;
+    private JFXTextField txtContact;
 
     @FXML
-    private TextField txtPname;
+    private JFXTextField txtPname;
 
     @FXML
-    private TextField txtPcontact;
+    private JFXTextField txtPcontact;
 
     @FXML
     private JFXButton btnReset;
@@ -51,7 +49,44 @@ public class MainFormController {
     @FXML
     private JFXButton btnSubmit;
 
+    private String sex;
+
+    @FXML
+    private Label Warning1;
+
+    @FXML
+    void Clear(MouseEvent event) {
+        txtName.clear();
+        txtName.clear();
+        txtAddress.clear();
+        txtSchool.clear();
+        txtContact.clear();
+        txtPname.clear();
+        txtPcontact.clear();
+    }
+
+    public void initialize() {
+
+    }
+
+    @FXML
+    void Submit(MouseEvent event) {
+        btnSubmit.setOnAction(e ->
+                {
+                    if (radioMale.isSelected()) {
+                        sex = "Male";
+                    }
+                    if (radioFemale.isSelected()) {
+                        sex = "Female";
+                    } else {
+                        Warning1.setText("Please Select An Option !");
+                    }
+                }
+        );
+    }
+
     public MainFormController() {
+
 
     }
 }
