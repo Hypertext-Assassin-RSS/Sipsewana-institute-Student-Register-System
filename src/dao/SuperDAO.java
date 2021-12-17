@@ -1,6 +1,6 @@
 package dao;
 
-import
+
 import entity.SuperEntity;
 
 /*
@@ -10,6 +10,6 @@ import entity.SuperEntity;
  */
 
 public interface SuperDAO <Entity extends SuperEntity>{
-    
+    public boolean add (Entity entity);
 
 }

@@ -10,7 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity(name = "program")
-public class Program {
+public class Program implements SuperEntity {
     @Id
     private String programId;
     private String name;

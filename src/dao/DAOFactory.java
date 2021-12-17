@@ -6,6 +6,8 @@ package dao;
  *12/17/2021
  */
 
+import dao.custom.impl.ProgramDAOImpl;
+
 public class DAOFactory {
     private static  DAOFactory daoFactory;
     private DAOFactory (){}
@@ -17,6 +19,8 @@ public class DAOFactory {
         switch (daoType) {
             case PROGRAM :
                 return (T) new ProgramDAOImpl();
+            default:
+                return null;
         }
     }
 }
