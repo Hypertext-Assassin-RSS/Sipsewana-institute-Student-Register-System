@@ -6,7 +6,7 @@ package util;
  *12/17/2021
  */
 
-import Entity.Program;
+import entity.Program;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

@@ -6,7 +6,7 @@ package controller;
  *12/16/2021
  */
 
-import Entity.Program;
+import entity.Program;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;

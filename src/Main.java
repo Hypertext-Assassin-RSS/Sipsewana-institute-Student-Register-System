@@ -1,12 +1,8 @@
-import Entity.Program;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import util.FactoryConfiguration;
 
 import java.io.IOException;
 
