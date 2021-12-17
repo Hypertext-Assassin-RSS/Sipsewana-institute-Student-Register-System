@@ -13,7 +13,6 @@ import org.hibernate.cfg.Configuration;
 
 public class FactoryConfiguration {
     public static Session session;
-
     static {
         Configuration configuration = new Configuration();
 
@@ -30,8 +29,6 @@ public class FactoryConfiguration {
         SessionFactory sessionFactory = configuration.buildSessionFactory();
 
         session = sessionFactory.openSession();
-
-
 
     }
 

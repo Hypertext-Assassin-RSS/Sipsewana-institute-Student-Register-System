@@ -1,4 +1,4 @@
-package Entity;
+package dto;
 
 /*
  *@author Rajith Sanjayan
@@ -6,25 +6,21 @@ package Entity;
  *12/17/2021
  */
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Entity(name = "program")
-public class Program {
-    @Id
+public class ProgramDTO {
     private String programId;
     private String name;
     private String duration;
     private double fee;
 
-    public Program(String programId, String name, String duration, double fee) {
+
+    public ProgramDTO() {
+    }
+
+    public ProgramDTO(String programId, String name, String duration, double fee) {
         this.setProgramId(programId);
         this.setName(name);
         this.setDuration(duration);
         this.setFee(fee);
-    }
-
-    public Program() {
     }
 
     public String getProgramId() {
@@ -61,7 +57,7 @@ public class Program {
 
     @Override
     public String toString() {
-        return "Program{" +
+        return "ProgramDTO{" +
                 "programId='" + programId + '\'' +
                 ", name='" + name + '\'' +
                 ", duration='" + duration + '\'' +
