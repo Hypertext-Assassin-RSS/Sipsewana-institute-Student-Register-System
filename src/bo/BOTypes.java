@@ -7,4 +7,5 @@ package bo;
  */
 
 public enum BOTypes {
+    PROGRAM
 }
