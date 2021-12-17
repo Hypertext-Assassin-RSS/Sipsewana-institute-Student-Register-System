@@ -8,10 +8,11 @@ package controller;
 
 import com.jfoenix.controls.*;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 
-public class MainFormController {
+public class RegisterFormController {
 
     @FXML
     private JFXTextField txtName;
@@ -69,24 +70,18 @@ public class MainFormController {
 
     }
 
+
     @FXML
     void Submit(MouseEvent event) {
-        btnSubmit.setOnAction(e ->
-                {
-                    if (radioMale.isSelected()) {
-                        sex = "Male";
-                    }
-                    if (radioFemale.isSelected()) {
-                        sex = "Female";
-                    } else {
-                        Warning1.setText("Please Select An Option !");
-                    }
-                }
-        );
-    }
-
-    public MainFormController() {
-
+        if (radioFemale.isSelected()) {
+            sex = "Female";
+        }
+        if (radioMale.isSelected()) {
+            sex = "Male";
+        }
 
     }
 }
+
+
+
