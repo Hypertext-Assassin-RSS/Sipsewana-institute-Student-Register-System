@@ -6,5 +6,9 @@ package bo.custom;
  *12/17/2021
  */
 
-public interface ProgramBO {
+import bo.SuperBO;
+import dto.ProgramDTO;
+
+public interface ProgramBO extends SuperBO {
+    public boolean add(ProgramDTO programDTO);
 }
