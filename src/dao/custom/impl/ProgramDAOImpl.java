@@ -15,7 +15,7 @@ import util.FactoryConfiguration;
 public class ProgramDAOImpl implements ProgramDAO {
     @Override
     public boolean add(Program entity) {
-        Session session = FactoryConfiguration.session.getSession();
+        Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
         session.save(entity);
