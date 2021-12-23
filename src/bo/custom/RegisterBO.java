@@ -8,9 +8,14 @@ package bo.custom;
 
 import bo.SuperBO;
 import dto.ProgramDTO;
+import dto.StudentDTO;
 
 import java.util.List;
 
 public interface RegisterBO extends SuperBO {
     public List<ProgramDTO> findAll() throws Exception;
+
+    public boolean add(StudentDTO studentDTO);
+
+
 }

@@ -8,7 +8,8 @@ package dao.custom;
 
 import dao.SuperDAO;
 import entity.Program;
+import entity.Student;
 
-public interface RegisterDAO extends SuperDAO<Program> {
+public interface RegisterDAO extends SuperDAO<Program, Student> {
 
 }

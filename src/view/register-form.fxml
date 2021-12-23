@@ -7,7 +7,6 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -46,8 +45,21 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1280.0">
+                           <children>
+                              <Label prefWidth="120.0" text="ID :" textFill="#0077a2">
+                                 <font>
+                                    <Font name="Roboto Black" size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="280.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <JFXTextField fx:id="txtId" prefWidth="500.0" />
+                           </children>
+                        </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1280.0">
                            <children>
                               <Label prefWidth="120.0" text="Name :" textFill="#0077a2">
@@ -149,33 +161,8 @@
                               <JFXTextField fx:id="txtContact" prefWidth="500.0" />
                            </children>
                         </HBox>
-                        <Separator prefWidth="200.0" />
-                        <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1280.0">
-                           <children>
-                              <Label prefWidth="120.0" text="Parent  Name :" textFill="#0077a2">
-                                 <font>
-                                    <Font name="Roboto Black" size="15.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets left="280.0" right="10.0" />
-                                 </HBox.margin>
-                              </Label>
-                              <JFXTextField fx:id="txtPname" prefWidth="500.0" />
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1280.0">
-                           <children>
-                              <Label prefWidth="120.0" text="Parent Contact :" textFill="#0077a2">
-                                 <font>
-                                    <Font name="Roboto Black" size="15.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets left="280.0" right="10.0" />
-                                 </HBox.margin>
-                              </Label>
-                              <JFXTextField fx:id="txtPcontact" prefWidth="500.0" />
-                           </children>
-                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1280.0" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1280.0" />
                         <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
                            <children>
                               <JFXButton fx:id="btnReset" buttonType="RAISED" onMouseClicked="#Clear" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: #FFB400;" text="RESET" textFill="#0077a2">
@@ -195,6 +182,9 @@
                                  </HBox.margin>
                               </JFXButton>
                            </children>
+                           <VBox.margin>
+                              <Insets top="-150.0" />
+                           </VBox.margin>
                         </HBox>
                      </children>
                   </VBox>

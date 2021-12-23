@@ -1,34 +1,28 @@
-package entity;
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
+package dto;
 
 /*
  *@author Rajith Sanjayan
  *Sipsewana-institute-Student-Register-System
  *12/23/2021
  */
-@Entity
-public class Student {
-    @Id
+
+public class StudentDTO {
     private String id;
     private String name;
-    private String Bday;
+    private String bDay;
     private String sex;
     private String address;
     private String school;
     private String program;
     private String contact;
 
-
-
-    public Student() {
+    public StudentDTO() {
     }
 
-    public Student(String id, String name, String bday, String sex, String address, String school, String program, String contact) {
+    public StudentDTO(String id, String name, String bDay, String sex, String address, String school, String program, String contact) {
         this.setId(id);
         this.setName(name);
-        setBday(bday);
+        this.setbDay(bDay);
         this.setSex(sex);
         this.setAddress(address);
         this.setSchool(school);
@@ -52,12 +46,12 @@ public class Student {
         this.name = name;
     }
 
-    public String getBday() {
-        return Bday;
+    public String getbDay() {
+        return bDay;
     }
 
-    public void setBday(String bday) {
-        Bday = bday;
+    public void setbDay(String bDay) {
+        this.bDay = bDay;
     }
 
     public String getSex() {
@@ -102,10 +96,10 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "StudentDTO{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", Bday='" + Bday + '\'' +
+                ", bDay='" + bDay + '\'' +
                 ", sex='" + sex + '\'' +
                 ", address='" + address + '\'' +
                 ", school='" + school + '\'' +

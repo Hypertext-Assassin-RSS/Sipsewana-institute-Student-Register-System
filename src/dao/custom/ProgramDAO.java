@@ -8,6 +8,9 @@ package dao.custom;
 
 import entity.Program;
 import dao.SuperDAO;
+import entity.Student;
 
-public interface ProgramDAO extends SuperDAO <Program> {
+public interface ProgramDAO extends SuperDAO <Program, Student> {
+    boolean add(Program entity);
+
 }

@@ -11,8 +11,8 @@ import java.util.List;
  *12/17/2021
  */
 
-public interface SuperDAO <Entity extends SuperEntity>{
-    public boolean add (Entity entity);
+public interface SuperDAO <Entity extends SuperEntity, Student>{
+    public boolean add (Student entity);
 
     public List<Entity> findAll() throws Exception;
 }

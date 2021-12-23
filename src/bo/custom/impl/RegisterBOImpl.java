@@ -11,13 +11,16 @@ import dao.DAOFactory;
 import dao.DAOType;
 import dao.custom.impl.RegisterDAOImpl;
 import dto.ProgramDTO;
+import dto.StudentDTO;
 import entity.Program;
+import entity.Student;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class RegisterBOImpl implements RegisterBO {
     RegisterDAOImpl registerDAOImpl = DAOFactory.getInstance().getDAO(DAOType.REGISTER);
+
 
     @Override
     public List<ProgramDTO> findAll() throws Exception {
@@ -35,5 +38,19 @@ public class RegisterBOImpl implements RegisterBO {
             ));
         }
         return dtoList;
+    }
+
+    @Override
+    public boolean add(StudentDTO studentDTO) {
+        return registerDAOImpl.add(new Student(
+                studentDTO.getId(),
+                studentDTO.getName(),
+                studentDTO.getbDay(),
+                studentDTO.getSex(),
+                studentDTO.getAddress(),
+                studentDTO.getSchool(),
+                studentDTO.getProgram(),
+                studentDTO.getContact()
+        ));
     }
 }
