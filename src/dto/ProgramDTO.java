@@ -7,7 +7,7 @@ package dto;
  */
 
 public class ProgramDTO {
-    private String programId;
+    private String Id;
     private String name;
     private String duration;
     private double fee;
@@ -16,19 +16,19 @@ public class ProgramDTO {
     public ProgramDTO() {
     }
 
-    public ProgramDTO(String programId, String name, String duration, double fee) {
-        this.setProgramId(programId);
+    public ProgramDTO(String id, String name, String duration, double fee) {
+        setId(id);
         this.setName(name);
         this.setDuration(duration);
         this.setFee(fee);
     }
 
-    public String getProgramId() {
-        return programId;
+    public String getId() {
+        return Id;
     }
 
-    public void setProgramId(String programId) {
-        this.programId = programId;
+    public void setId(String id) {
+        Id = id;
     }
 
     public String getName() {
@@ -58,7 +58,7 @@ public class ProgramDTO {
     @Override
     public String toString() {
         return "ProgramDTO{" +
-                "programId='" + programId + '\'' +
+                "Id='" + Id + '\'' +
                 ", name='" + name + '\'' +
                 ", duration='" + duration + '\'' +
                 ", fee=" + fee +

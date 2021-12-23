@@ -20,7 +20,7 @@ public class ProgramBOImpl implements ProgramBO {
     @Override
     public boolean add(ProgramDTO programDTO) {
         return  programDAO.add(new Program(
-                programDTO.getProgramId(),
+                programDTO.getId(),
                 programDTO.getName(),
                 programDTO.getDuration(),
                 programDTO.getFee()
