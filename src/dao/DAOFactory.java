@@ -6,7 +6,9 @@ package dao;
  *12/17/2021
  */
 
+import bo.custom.impl.RegisterBOImpl;
 import dao.custom.impl.ProgramDAOImpl;
+import dao.custom.impl.RegisterDAOImpl;
 
 public class DAOFactory {
     private static  DAOFactory daoFactory;
@@ -19,6 +21,8 @@ public class DAOFactory {
         switch (daoType) {
             case PROGRAM :
                 return (T) new ProgramDAOImpl();
+            case REGISTER:
+                return (T) new RegisterDAOImpl();
             default:
                 return null;
         }

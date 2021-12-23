@@ -60,7 +60,6 @@ public class Program implements SuperEntity {
     public void setFee(double fee) {
         this.fee = fee;
     }
-
     @Override
     public String toString() {
         return "Program{" +
@@ -70,4 +69,5 @@ public class Program implements SuperEntity {
                 ", fee=" + fee +
                 '}';
     }
+
 }

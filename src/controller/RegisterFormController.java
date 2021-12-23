@@ -6,11 +6,18 @@ package controller;
  *12/16/2021
  */
 
+import bo.BOFactory;
+import bo.BOTypes;
+import bo.custom.RegisterBO;
 import com.jfoenix.controls.*;
+import dto.ProgramDTO;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+
+import java.sql.SQLException;
+import java.util.List;
 
 public class RegisterFormController {
 
@@ -55,6 +62,8 @@ public class RegisterFormController {
     @FXML
     private Label Warning1;
 
+    RegisterBO registerBO = (RegisterBO) BOFactory.getInstance().getBO(BOTypes.REGISTER);
+
     @FXML
     void Clear(MouseEvent event) {
         txtName.clear();
@@ -67,6 +76,23 @@ public class RegisterFormController {
     }
 
     public void initialize() {
+        loadAllPrograms();
+    }
+
+    private void loadAllPrograms() {
+        try {
+            List<ProgramDTO> all = registerBO.findAll();
+            for (ProgramDTO programDTO : all) {
+                cmbCourse.getItems().add(programDTO.getName());
+
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "Failed to load customer ids").show();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 

@@ -3,6 +3,8 @@ package dao;
 
 import entity.SuperEntity;
 
+import java.util.List;
+
 /*
  *@author Rajith Sanjayan
  *Sipsewana-institute-Student-Register-System
@@ -12,4 +14,5 @@ import entity.SuperEntity;
 public interface SuperDAO <Entity extends SuperEntity>{
     public boolean add (Entity entity);
 
+    public List<Entity> findAll() throws Exception;
 }

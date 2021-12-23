@@ -6,7 +6,9 @@ package bo;
  *12/17/2021
  */
 
+import bo.custom.RegisterBO;
 import bo.custom.impl.ProgramBOImpl;
+import bo.custom.impl.RegisterBOImpl;
 
 public class BOFactory {
     private static  BOFactory boFactory;
@@ -20,6 +22,8 @@ public class BOFactory {
         switch (boTypes) {
             case PROGRAM :
                 return (T) new ProgramBOImpl();
+            case REGISTER:
+                return (T) new RegisterBOImpl();
             default:
                 return null;
         }
