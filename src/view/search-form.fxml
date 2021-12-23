@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0077A2;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchFormController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="29.0" prefWidth="600.0">
+               <children>
+                  <Label text="SEARCH" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <Label prefWidth="90.0" text="Student ID  :" textFill="#ffb400">
+                     <font>
+                        <Font name="Roboto Black" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtId" prefHeight="25.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <Label prefWidth="90.0" text="Name  :" textFill="#ffb400">
+                     <font>
+                        <Font name="Roboto Black" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtName" prefHeight="25.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <Label prefWidth="90.0" text="Address  :" textFill="#ffb400">
+                     <font>
+                        <Font name="Roboto Black" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtAddress" prefHeight="25.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <Label prefWidth="90.0" text="Contact  :" textFill="#ffb400">
+                     <font>
+                        <Font name="Roboto Black" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtContact" prefHeight="25.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <Label prefWidth="90.0" text="Program  :" textFill="#ffb400">
+                     <font>
+                        <Font name="Roboto Black" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtProgram" prefHeight="25.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="76.0" prefWidth="600.0">
+               <children>
+                  <JFXButton buttonType="RAISED" prefHeight="44.0" prefWidth="119.0" style="-fx-background-color: #FFB400;" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Condensed Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" prefHeight="44.0" prefWidth="119.0" style="-fx-background-color: #FFB400;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Condensed Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

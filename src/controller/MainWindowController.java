@@ -52,6 +52,8 @@ public class MainWindowController {
                 case "iconProgram":
                     root = FXMLLoader.load(getClass().getResource("/view/program-form.fxml"));
                     break;
+                case "iconSearch":
+                    root = FXMLLoader.load(getClass().getResource("/view/search-form.fxml"));
 
             }
 
