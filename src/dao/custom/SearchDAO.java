@@ -14,6 +14,6 @@ import java.util.List;
 
 public interface SearchDAO extends SuperDAO<Student, Program> {
 
-     List<Student> search(String id) throws Exception;
+     Student search(String id) throws Exception;
 
 }

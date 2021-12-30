@@ -29,19 +29,21 @@ public class SearchDAOImpl implements SearchDAO {
     }
 
     @Override
-    public List<Student> search(String id) throws SQLException, ClassNotFoundException {
+    public Student search(String id) throws SQLException, ClassNotFoundException {
+
         Session session = FactoryConfiguration.getInstance().getSession();
+
         Transaction transaction = session.beginTransaction();
 
         List<Student> list = null;
 
-        Query student = session.createQuery("from student where id = id");
-        list = student.list();
+        /*Query student = session.createQuery("FROM student s WHERE s.id =:id");*/
+        Student student = session.get(Student.class,id);
 
         transaction.commit();
 
         session.close();
 
-        return list;
+        return student;
     }
 }

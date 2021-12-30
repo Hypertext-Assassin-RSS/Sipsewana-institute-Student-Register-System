@@ -14,5 +14,5 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface SearchBO extends SuperBO {
-    List<Student> search(String id) throws SQLException, ClassNotFoundException;
+    Student search(String id) throws SQLException, ClassNotFoundException;
 }

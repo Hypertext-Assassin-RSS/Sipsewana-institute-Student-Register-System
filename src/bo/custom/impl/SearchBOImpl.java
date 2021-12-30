@@ -21,7 +21,7 @@ public class SearchBOImpl implements SearchBO {
     SearchDAOImpl searchDAO = DAOFactory.getInstance().getDAO(DAOType.SEARCH);
 
     @Override
-    public List<Student> search(String id) throws SQLException, ClassNotFoundException {
+    public Student search(String id) throws SQLException, ClassNotFoundException {
        return  searchDAO.search(id);
     }
 }

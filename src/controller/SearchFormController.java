@@ -58,22 +58,18 @@ public class SearchFormController {
 
         {
             try {
-                List<Student> all = searchBO.search(id);
-                for (Student student : all) {
-                    txtId.setText(student.getId());
+                Student student = searchBO.search(id);
                     txtName.setText(student.getName());
                     txtAddress.setText(student.getAddress());
                     txtContact.setText(student.getContact());
                     txtProgram.setText(student.getProgram());
 
-                }
-            } catch (SQLException e) {
-                new Alert(Alert.AlertType.ERROR, "Failed to load student").show();
+                } catch (SQLException e) {
+                e.printStackTrace();
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
-            } catch (Exception e) {
-                e.printStackTrace();
             }
+
 
         }
     }
