@@ -9,6 +9,7 @@ package dao;
 import bo.custom.impl.RegisterBOImpl;
 import dao.custom.impl.ProgramDAOImpl;
 import dao.custom.impl.RegisterDAOImpl;
+import dao.custom.impl.SearchDAOImpl;
 
 public class DAOFactory {
     private static  DAOFactory daoFactory;
@@ -23,6 +24,8 @@ public class DAOFactory {
                 return (T) new ProgramDAOImpl();
             case REGISTER:
                 return (T) new RegisterDAOImpl();
+            case SEARCH:
+                return (T) new SearchDAOImpl();
             default:
                 return null;
         }

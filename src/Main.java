@@ -1,8 +1,13 @@
+import entity.Program;
+import entity.Student;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import util.FactoryConfiguration;
 
 import java.io.IOException;
 
@@ -27,19 +32,24 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        /*Session session = FactoryConfiguration.session.getSession();
+        /*Session session = FactoryConfiguration.getInstance().getSession();
 
         Transaction transaction = session.beginTransaction();
 
+        Student student = new Student();*/
 
+/*
         Program program = new Program();
 
         program.setProgramId("CT0402");
         program.setName("Quantity Surveying");
         program.setDuration("1 year");
         program.setFee(Double.parseDouble("10000000"));
+*/
 
-        session.save(program);
+       /* session.get(Student.class,"200027301776");
+
+        System.out.println(student);
 
         transaction.commit();
 

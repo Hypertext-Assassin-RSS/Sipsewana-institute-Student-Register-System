@@ -7,5 +7,5 @@ package bo;
  */
 
 public enum BOTypes {
-    PROGRAM,REGISTER
+    PROGRAM,REGISTER,SEARCH
 }

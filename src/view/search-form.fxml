@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0077A2;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchFormController">
    <children>
       <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -75,15 +74,7 @@
             </HBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="76.0" prefWidth="600.0">
                <children>
-                  <JFXButton buttonType="RAISED" prefHeight="44.0" prefWidth="119.0" style="-fx-background-color: #FFB400;" text="Delete" textFill="WHITE">
-                     <font>
-                        <Font name="Roboto Condensed Bold" size="15.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets right="30.0" />
-                     </HBox.margin>
-                  </JFXButton>
-                  <JFXButton buttonType="RAISED" prefHeight="44.0" prefWidth="119.0" style="-fx-background-color: #FFB400;" text="Save" textFill="WHITE">
+                  <JFXButton buttonType="RAISED" onMouseClicked="#search" prefHeight="44.0" prefWidth="119.0" style="-fx-background-color: #FFB400;" text="Search" textFill="WHITE">
                      <font>
                         <Font name="Roboto Condensed Bold" size="15.0" />
                      </font>

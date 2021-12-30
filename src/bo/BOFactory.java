@@ -9,6 +9,7 @@ package bo;
 import bo.custom.RegisterBO;
 import bo.custom.impl.ProgramBOImpl;
 import bo.custom.impl.RegisterBOImpl;
+import bo.custom.impl.SearchBOImpl;
 
 public class BOFactory {
     private static  BOFactory boFactory;
@@ -24,6 +25,8 @@ public class BOFactory {
                 return (T) new ProgramBOImpl();
             case REGISTER:
                 return (T) new RegisterBOImpl();
+            case SEARCH:
+                return (T) new SearchBOImpl();
             default:
                 return null;
         }

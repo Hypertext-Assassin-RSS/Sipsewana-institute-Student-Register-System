@@ -12,6 +12,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import java.io.FileInputStream;
+import java.util.Properties;
+
 public class FactoryConfiguration {
     /*public static Session session;
     static {
@@ -36,7 +39,19 @@ public class FactoryConfiguration {
     private SessionFactory sessionFactory;
 
     private FactoryConfiguration(){
-        Configuration configuration = new Configuration();
+        Properties properties = new Properties();
+        try {
+            properties.load(new FileInputStream("hibernate.properties"));
+        }catch (Exception e){
+
+        }
+
+        Configuration configure = new Configuration().addProperties(properties)
+                .addAnnotatedClass(Program.class)
+                .addAnnotatedClass(Student.class);
+        sessionFactory = configure.buildSessionFactory();
+
+        /*Configuration configuration = new Configuration();
         configuration.setProperty("hibernate.connection.driver_class","com.mysql.jdbc.Driver");
         configuration.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/Sipsewana");
         configuration.setProperty("hibernate.connection.username","root");
@@ -47,7 +62,7 @@ public class FactoryConfiguration {
 
         configuration.addAnnotatedClass(Program.class).addAnnotatedClass(Student.class);
 
-        sessionFactory = configuration.buildSessionFactory();
+        sessionFactory = configuration.buildSessionFactory();*/
     }
 
     public static FactoryConfiguration getInstance(){
