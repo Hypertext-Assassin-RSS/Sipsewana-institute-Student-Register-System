@@ -14,9 +14,5 @@ import java.util.List;
  */
 
 public interface SuperDAO <Entity extends SuperEntity, Student>{
-    public boolean add (Student entity);
-
-    public List<Entity> findAll() throws Exception;
-
 
 }

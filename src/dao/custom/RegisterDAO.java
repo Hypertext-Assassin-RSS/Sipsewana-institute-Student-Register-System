@@ -10,6 +10,10 @@ import dao.SuperDAO;
 import entity.Program;
 import entity.Student;
 
-public interface RegisterDAO extends SuperDAO<Program, Student> {
+import java.util.List;
 
+public interface RegisterDAO extends SuperDAO<Program, Student> {
+    public boolean add (Student entity);
+
+    public List<Program> findAll() throws Exception;
 }

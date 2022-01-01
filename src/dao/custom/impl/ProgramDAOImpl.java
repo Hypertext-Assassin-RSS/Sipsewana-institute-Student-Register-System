@@ -27,14 +27,4 @@ public class ProgramDAOImpl implements ProgramDAO {
         session.close();
         return true;
     }
-
-    @Override
-    public boolean add(Student entity) {
-        return false;
-    }
-
-    @Override
-    public List<Program> findAll() throws Exception {
-        return null;
-    }
 }

@@ -18,15 +18,6 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class SearchDAOImpl implements SearchDAO {
-    @Override
-    public boolean add(Program entity) {
-        return false;
-    }
-
-    @Override
-    public List<Student> findAll() throws Exception {
-        return null;
-    }
 
     @Override
     public Student search(String id) throws SQLException, ClassNotFoundException {
