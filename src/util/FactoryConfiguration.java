@@ -8,6 +8,7 @@ package util;
 
 import entity.Program;
 import entity.Student;
+import entity.Student_Program;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -48,7 +49,8 @@ public class FactoryConfiguration {
 
         Configuration configure = new Configuration().addProperties(properties)
                 .addAnnotatedClass(Program.class)
-                .addAnnotatedClass(Student.class);
+                .addAnnotatedClass(Student.class)
+                .addAnnotatedClass(Student_Program.class);
         sessionFactory = configure.buildSessionFactory();
 
         /*Configuration configuration = new Configuration();

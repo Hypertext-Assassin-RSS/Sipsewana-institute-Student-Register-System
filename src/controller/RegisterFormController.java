@@ -9,10 +9,12 @@ package controller;
 import bo.BOFactory;
 import bo.BOTypes;
 import bo.custom.RegisterBO;
+import bo.custom.Student_ProgramBO;
 import bo.custom.impl.RegisterBOImpl;
 import com.jfoenix.controls.*;
 import dto.ProgramDTO;
 import dto.StudentDTO;
+import dto.Student_ProgramDTO;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
@@ -67,8 +69,8 @@ public class RegisterFormController {
     @FXML
     private Label Warning1;
 
-    RegisterBOImpl registerBOImpl = BOFactory.getInstance().getBO(BOTypes.REGISTER);
 
+    Student_ProgramBO studentProgramBO = (Student_ProgramBO) BOFactory.getInstance().getBO(BOTypes.STUDENT_PROGRAM);
     RegisterBO registerBO = (RegisterBO) BOFactory.getInstance().getBO(BOTypes.REGISTER);
 
     @FXML
@@ -121,24 +123,34 @@ public class RegisterFormController {
         String program =cmbCourse.getValue();
         String contact = txtContact.getText();
 
+        String nId = txtId.getText() + txtName.getText();
+        String sId = txtId.getText();
+        String sName = txtName.getText();
+        String pName = cmbCourse.getValue();
+
         /*System.out.println(Bday);*/
 
         try {
             if (registerBO.add(new StudentDTO(id,name,bDay,sex,address,school,program,contact)));{
                 new Alert(Alert.AlertType.CONFIRMATION,"Are You Sure").showAndWait();
-                txtId.setText(null);
+                /*txtId.setText(null);
                 txtName.setText(null);
                 txtBday.setValue(null);
                 txtAddress.setText(null);
                 txtSchool.setText(null);
                 cmbCourse.setValue(null);
-                txtContact.setText(null);
+                txtContact.setText(null);*/
             }
         }catch (Exception e){
             new Alert(Alert.AlertType.ERROR,"Error"+ e).showAndWait();
         }
+        try {
+            if (studentProgramBO.add(new Student_ProgramDTO(nId, sName, pName, sId)));{
 
-
+            }
+        } catch (Exception exception) {
+            new Alert(Alert.AlertType.ERROR, "Error" + exception).showAndWait();
+        }
     }
 }
 

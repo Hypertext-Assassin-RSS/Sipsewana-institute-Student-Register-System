@@ -7,5 +7,5 @@ package dao;
  */
 
 public enum DAOType {
-    PROGRAM, SEARCH, REGISTER
+    PROGRAM, SEARCH, STUDENT_PROGRAM, REGISTER
 }
