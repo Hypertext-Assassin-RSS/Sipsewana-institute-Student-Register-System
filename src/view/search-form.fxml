@@ -19,10 +19,10 @@
                <children>
                   <ImageView fitHeight="150.0" fitWidth="25.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@assets/icon/icons8_Close_512px.png" />
+                        <Image url="@assets/icon/icons8_close_window_480px.png" />
                      </image>
                      <HBox.margin>
-                        <Insets right="10.0" />
+                        <Insets right="7.0" />
                      </HBox.margin>
                   </ImageView>
                </children>
@@ -88,12 +88,20 @@
             </HBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="76.0" prefWidth="600.0">
                <children>
-                  <JFXButton buttonType="RAISED" onMouseClicked="#search" prefHeight="44.0" prefWidth="119.0" style="-fx-background-color: #FFB400;" text="Search" textFill="WHITE">
+                  <JFXButton buttonType="RAISED" onMouseClicked="#delete" prefHeight="44.0" prefWidth="119.0" style="-fx-background-color: #FFB400;" text="Delete" textFill="WHITE">
                      <font>
                         <Font name="Roboto Condensed Bold" size="15.0" />
                      </font>
                      <HBox.margin>
                         <Insets right="30.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" onMouseClicked="#search" prefHeight="44.0" prefWidth="119.0" style="-fx-background-color: #FFB400;" text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Condensed Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
                      </HBox.margin>
                   </JFXButton>
                </children>

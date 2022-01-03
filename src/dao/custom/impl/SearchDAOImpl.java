@@ -37,4 +37,20 @@ public class SearchDAOImpl implements SearchDAO {
 
         return student;
     }
+
+    @Override
+    public boolean delete(String id) {
+
+        Session session = FactoryConfiguration.getInstance().getSession();
+
+        Transaction transaction = session.beginTransaction();
+
+        session.delete(id,Student.class);
+
+        transaction.commit();
+
+        session.close();
+
+        return true;
+    }
 }

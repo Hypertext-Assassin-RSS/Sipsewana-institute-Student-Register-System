@@ -24,4 +24,9 @@ public class SearchBOImpl implements SearchBO {
     public Student search(String id) throws SQLException, ClassNotFoundException {
        return  searchDAO.search(id);
     }
+
+    @Override
+    public boolean delete(String id) {
+        return searchDAO.delete(id);
+    }
 }

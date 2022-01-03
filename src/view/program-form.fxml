@@ -23,16 +23,19 @@
          <top>
             <VBox alignment="CENTER" prefHeight="76.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
                <children>
-                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="CENTER_RIGHT" prefHeight="38.0" prefWidth="1300.0">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="30.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@assets/icon/icons8_Close_512px.png" />
+                              <Image url="@assets/icon/icons8_close_window_480px.png" />
                            </image>
+                           <HBox.margin>
+                              <Insets right="3.0" />
+                           </HBox.margin>
                         </ImageView>
                      </children>
                      <VBox.margin>
-                        <Insets right="10.0" />
+                        <Insets />
                      </VBox.margin>
                   </HBox>
                   <Label text="Add new training programs.">

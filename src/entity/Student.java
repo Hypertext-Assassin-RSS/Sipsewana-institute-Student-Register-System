@@ -8,7 +8,7 @@ import javax.persistence.Id;
  *Sipsewana-institute-Student-Register-System
  *12/23/2021
  */
-@Entity(name = "student")
+@Entity
 public class Student implements SuperEntity {
     @Id
     private String id;

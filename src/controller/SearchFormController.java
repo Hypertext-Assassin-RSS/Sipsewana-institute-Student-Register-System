@@ -88,4 +88,14 @@ public class SearchFormController {
         stage.setScene(scene);
         stage.show();
     }
+    @FXML
+    void delete(MouseEvent event) {
+        String id = txtId.getText();
+        if (searchBO.delete(id)){
+            new Alert(Alert.AlertType.CONFIRMATION,"Are You Sure ?").showAndWait();
+        }else{
+            new Alert(Alert.AlertType.ERROR).showAndWait();
+        }
+    }
+
 }

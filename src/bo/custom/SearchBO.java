@@ -15,4 +15,6 @@ import java.util.List;
 
 public interface SearchBO extends SuperBO {
     Student search(String id) throws SQLException, ClassNotFoundException;
+
+    boolean delete(String id);
 }

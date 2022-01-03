@@ -16,4 +16,6 @@ public interface SearchDAO extends SuperDAO<Student, Program> {
 
      Student search(String id) throws Exception;
 
+     boolean delete(String id);
+
 }

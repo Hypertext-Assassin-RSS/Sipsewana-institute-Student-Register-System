@@ -25,10 +25,10 @@
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@assets/icon/icons8_Close_512px.png" />
+                              <Image url="@assets/icon/icons8_close_window_480px.png" />
                            </image>
                            <HBox.margin>
-                              <Insets right="20.0" />
+                              <Insets right="5.0" />
                            </HBox.margin>
                         </ImageView>
                      </children>
