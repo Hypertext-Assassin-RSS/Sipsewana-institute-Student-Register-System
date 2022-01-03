@@ -8,6 +8,7 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -15,6 +16,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -60,9 +62,44 @@ public class MainWindowController {
             if (root != null) {
                 Scene scene = new Scene(root);
                 Stage stage = (Stage) this.root.getScene().getWindow();
+                Stage stage1 = new Stage();
+                stage1.initStyle(StageStyle.UNDECORATED);
                 stage.setScene(scene);
                 stage.show();
             }
         }
     }
+    @FXML
+    void enter(MouseEvent event) {
+        if (event.getSource() instanceof  ImageView) {
+            ImageView imageView = (ImageView) event.getSource();
+
+            Parent root = null;
+
+            switch (imageView.getId()){
+                case "iconUser" :
+                    lblOption.setText("Add new Student");
+                    break;
+                case "iconProgram" :
+                    lblOption.setText("Add new program");
+                    break;
+                case "iconSearch" :
+                    lblOption.setText("Search Registered Student");
+                    break;
+                default:
+                    lblOption.setText(null);
+                    break;
+            }
+        }
+    }
+    @FXML
+    void close(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.close();
+    }
+    @FXML
+    void exit(MouseEvent event) throws IOException {
+        lblOption.setText("Select Option !");
+    }
+
 }

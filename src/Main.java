@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import util.FactoryConfiguration;
@@ -29,6 +30,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws IOException {
         Parent load = FXMLLoader.load(getClass().getResource("view/main-window.fxml"));
         Scene scene = new Scene(load);
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(scene);
         primaryStage.show();
 

@@ -18,9 +18,15 @@ import dto.StudentDTO;
 import entity.Student;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -72,5 +78,14 @@ public class SearchFormController {
 
 
         }
+    }
+    @FXML
+    void close(MouseEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.close();
+        Parent load = FXMLLoader.load(getClass().getResource("/view/main-window.fxml"));
+        Scene scene = new Scene(load);
+        stage.setScene(scene);
+        stage.show();
     }
 }

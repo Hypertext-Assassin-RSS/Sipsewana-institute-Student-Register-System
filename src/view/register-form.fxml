@@ -19,9 +19,21 @@
    <children>
       <BorderPane prefHeight="200.0" prefWidth="1280.0" style="-fx-background-color: #FAFAFA;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <VBox prefHeight="154.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+            <VBox prefHeight="196.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
                <children>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1280.0">
+                  <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="1280.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/icon/icons8_Close_512px.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="116.0" prefWidth="1280.0">
                      <children>
                         <ImageView fitHeight="114.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -45,7 +57,7 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1280.0">
                            <children>
@@ -163,7 +175,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1280.0" />
                         <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="1280.0" />
-                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                        <HBox alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="1280.0" spacing="50.0">
                            <children>
                               <JFXButton fx:id="btnReset" buttonType="RAISED" onMouseClicked="#Clear" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: #FFB400;" text="RESET" textFill="#0077a2">
                                  <HBox.margin>
